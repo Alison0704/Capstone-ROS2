@@ -1,0 +1,15 @@
+cd /work/ros2_ws
+source /opt/ros/humble/setup.bash
+
+# Build the package
+colcon build --packages-select jime_controller
+
+# Source the local installation
+source install/setup.bash
+
+
+==========IDLE_WAIT==========
+
+# Listen to the velocity commands
+ros2 topic echo /cmd_vel
+
